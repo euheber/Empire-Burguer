@@ -26,9 +26,9 @@ body {
   background-color: #faf3f2;
 }
 
-img {
+/* img {
   max-width: 100%;
-}
+} */
 
 .title {
   font-family: var(--title);
@@ -40,7 +40,7 @@ img {
 /* Header */
 
 header {
-  min-height: 30rem;
+  min-height: 50rem;
   background-image: url(../assets/banner-hero.png);
   background-position: center;
   background-size: cover;
@@ -159,6 +159,7 @@ nav {
 .hero-banner {
   max-width: 1200px;
   margin: 5rem auto 0 auto;
+  padding: 1rem;
 }
 
 .hero-banner h1 {
@@ -212,5 +213,23 @@ nav {
 
   #mobile-btn {
     display: block;
+  }
+  .info{ 
+    width: 300px;
+    bottom: -10rem;
+  }
+}
+
+
+@media(max-width: 540px){
+  
+  header{
+    background-image: url(../assets/Banner\ mobile\ 1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero-banner h1 {
+    font-size: 2rem;
   }
 }
