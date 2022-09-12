@@ -40,7 +40,7 @@ body {
 /* Header */
 
 header {
-  min-height: 50rem;
+  min-height: 35rem;
   background-image: url(../assets/banner-hero.png);
   background-position: center;
   background-size: cover;
@@ -83,7 +83,6 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-right: 6rem;
   width: 15rem;
 }
 
@@ -184,7 +183,7 @@ nav {
   align-items: center;
   left: 0;
   right: 0;
-  bottom: -4rem;
+  margin-top: 10rem;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -205,7 +204,7 @@ nav {
  gap: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .contact-box,
   .navigation {
     display: none;
@@ -214,19 +213,30 @@ nav {
   #mobile-btn {
     display: block;
   }
+
+  header{
+    min-height: 50rem;
+  }
+
   .info{ 
-    width: 300px;
-    bottom: -10rem;
+    bottom: -8rem;
   }
 }
 
 
 @media(max-width: 540px){
+
+  .info{ 
+ 
+    width: 300px;
+    bottom: -8rem;
+  }
   
   header{
     background-image: url(../assets/Banner\ mobile\ 1.png);
     background-size:cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   .hero-banner h1 {
