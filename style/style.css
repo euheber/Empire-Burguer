@@ -209,13 +209,18 @@ nav {
 
 /* Offers */
 
-main{
+main {
   padding: 2rem;
 }
 .specials-offers {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.specials-offers h2, .specials-offers p{
+  margin-bottom: 1rem;
+}
+
 
 .offers {
   display: grid;
@@ -228,12 +233,15 @@ main{
   min-height: 25rem;
 }
 
-.offer-info h2, .offer-info span{
+.offer-info h2,
+.offer-info span {
   color: white;
 }
 
-.offer-alert p, .offer-alert h3{
+.offer-alert p,
+.offer-alert h3 {
   color: white;
+  margin: 0;
 }
 
 .first-offer,
@@ -241,6 +249,12 @@ main{
 .third-offer {
   border-radius: 7px;
   padding: 1rem;
+}
+
+.first-offer h2,
+.second-offer h2,
+.third-offer h2{
+  margin: 0;
 }
 
 .first-offer {
@@ -251,13 +265,12 @@ main{
   display: flex;
 }
 
-.offer-info { 
+.offer-info {
   width: 90%;
 }
 
-.offer-alert{
+.offer-alert {
   align-self: flex-end;
-
 }
 
 .second-offer {
@@ -275,8 +288,7 @@ main{
 }
 
 @media (max-width: 960px) {
-
-  header{
+  header {
     margin-bottom: 6rem;
   }
 
@@ -294,14 +306,13 @@ main{
   }
 
   .info {
-    width: 70%;
+    width: 85%;
     bottom: -6rem;
   }
 }
 
 @media (max-width: 540px) {
   .info {
-
     bottom: -8rem;
   }
 
@@ -310,9 +321,18 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 8rem;
   }
 
   .hero-banner h1 {
     font-size: 2rem;
+  }
+  .offers {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr 10fr 10fr;
+    grid-template-areas:
+      "first-offer "
+      "second-offer"
+      "third-offer";
   }
 }
