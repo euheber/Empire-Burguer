@@ -233,6 +233,10 @@ main {
   min-height: 25rem;
 }
 
+.offer-info {
+  width: 90%;
+}
+
 .offer-info h2,
 .offer-info span {
   color: white;
@@ -263,10 +267,6 @@ main {
   grid-area: first-offer;
   background-position: center;
   display: flex;
-}
-
-.offer-info {
-  width: 90%;
 }
 
 .offer-alert {
@@ -334,5 +334,9 @@ main {
       "first-offer "
       "second-offer"
       "third-offer";
+  }
+
+  .offer-info h2{
+    font-size: 1.5rem;
   }
 }
