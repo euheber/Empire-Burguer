@@ -8,6 +8,7 @@
   list-style-type: none;
   font-family: var(--text);
   color: var(--black);
+  font-weight: 400;
 }
 
 :root {
@@ -44,8 +45,10 @@ header {
   background-image: url(../assets/banner-hero.png);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   position: relative;
+  margin-bottom: 4rem;
 }
 
 .logo {
@@ -190,7 +193,7 @@ nav {
   border-radius: 7px;
   box-shadow: 0px 4px 40px rgba(179, 155, 132, 0.5);
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .info-icons {
@@ -201,10 +204,82 @@ nav {
 
 .content-info {
   align-items: center;
- gap: 1rem;
+  gap: 1rem;
+}
+
+/* Offers */
+
+main{
+  padding: 2rem;
+}
+.specials-offers {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1.05fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "first-offer second-offer"
+    "first-offer third-offer";
+  min-height: 25rem;
+}
+
+.offer-info h2, .offer-info span{
+  color: white;
+}
+
+.offer-alert p, .offer-alert h3{
+  color: white;
+}
+
+.first-offer,
+.second-offer,
+.third-offer {
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.first-offer {
+  background: url(../assets/oferta-1.png) no-repeat;
+  background-size: cover;
+  grid-area: first-offer;
+  background-position: center;
+  display: flex;
+}
+
+.offer-info { 
+  width: 90%;
+}
+
+.offer-alert{
+  align-self: flex-end;
+
+}
+
+.second-offer {
+  background: url(../assets/oferta-2.png) no-repeat;
+  background-size: cover;
+  grid-area: second-offer;
+  background-position: center;
+}
+
+.third-offer {
+  background: url(../assets/oferta-3.png) no-repeat;
+  background-size: cover;
+  grid-area: third-offer;
+  background-position: center;
 }
 
 @media (max-width: 960px) {
+
+  header{
+    margin-bottom: 6rem;
+  }
+
   .contact-box,
   .navigation {
     display: none;
@@ -214,27 +289,25 @@ nav {
     display: block;
   }
 
-  header{
+  header {
     min-height: 50rem;
   }
 
-  .info{ 
-    bottom: -8rem;
+  .info {
+    width: 70%;
+    bottom: -6rem;
   }
 }
 
+@media (max-width: 540px) {
+  .info {
 
-@media(max-width: 540px){
-
-  .info{ 
- 
-    width: 300px;
     bottom: -8rem;
   }
-  
-  header{
+
+  header {
     background-image: url(../assets/Banner\ mobile\ 1.png);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
