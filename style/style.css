@@ -117,7 +117,7 @@ nav {
 
 #mobile-btn {
   display: none;
-  margin-right: 5rem;
+  margin-right: 2rem;
   font-size: 1.5rem;
   transition: 0.5s ease;
 }
@@ -218,7 +218,7 @@ main {
 }
 
 .specials-offers h2, .specials-offers p{
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
 }
 
 
@@ -234,7 +234,7 @@ main {
 }
 
 .offer-info {
-  width: 90%;
+  width: 95%;
 }
 
 .offer-info h2,
@@ -253,6 +253,10 @@ main {
 .third-offer {
   border-radius: 7px;
   padding: 1rem;
+}
+
+.first-offer{ 
+  padding: 2rem;
 }
 
 .first-offer h2,
