@@ -19,7 +19,7 @@
   --green: #00a950;
   --lightgreen: #a1cf67;
   --black: #141318;
-  --brown: #1d0605;
+  --brown: #3B200B;
   --light-brown: #fae2cb;
 }
 
@@ -210,11 +210,13 @@ nav {
 /* Offers */
 
 main {
-  padding: 2rem;
+  width: 100%;
+  padding-block: 2rem;
 }
 .specials-offers {
   max-width: 1200px;
   margin: 0 auto;
+  padding-inline: 2rem;
 }
 
 .specials-offers h2, .specials-offers p{
@@ -303,17 +305,20 @@ main {
   gap: 1rem;
   padding: .5rem;
   border-radius: 7px;
+  width: 50%;
 }
 
 .timer{
-  /* background-color: rgba(29, 6, 5, 0.2); */
-  border-radius: 50%;
+
   align-items: center;
   justify-content: center;
-  width: 25%;
 }
 
-
+.timer svg{
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: rgba(29, 6, 5, 0.2); 
+}
 .timer-info{
   border-left: 1px solid rgba(29, 6, 5, 0.4);
   padding-inline: 1rem;
@@ -327,6 +332,10 @@ main {
   color: var(--light-brown);
 }
 
+.instagramHashCta {
+  text-align: center;
+}
+
 .instagramHashCta h1{
   color: var(--red);
 }
@@ -334,6 +343,54 @@ main {
 .instagramHashCta p{
   color: rgba(29, 6, 5, 0.69);;
 }
+
+/* Menu */
+
+.menu{
+  margin-top: 3rem;
+  width: 100%;
+  min-height: 20rem;
+}
+
+
+.right-cta{ 
+  background-image: url(../assets/banner-menu.png);
+  background-position:left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30rem;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+
+.right-cta-menu-info{ 
+  max-width: 30rem;
+  min-height: 10rem;
+  align-self: center;
+}
+
+.right-cta-menu-info h1{
+  font-size: 3rem;
+  color: var(--brown);
+}
+
+.right-cta-menu-info span{
+  color: var(--brown);
+}
+
+.menu-list{
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  flex: 1;
+  background-color: var(--brown);
+}
+
+.menu-list h2{ 
+  color: var(--yellow);
+  text-align: center;
+}
+/* Menu */
 
 /* media queries */
 @media (max-width: 960px) {
@@ -391,5 +448,9 @@ main {
 
   .hour-info{
     width: 100%;
+  }
+
+  .instagramHashCta{
+    margin: 0 auto;
   }
 }
