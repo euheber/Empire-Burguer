@@ -291,6 +291,51 @@ main {
   background-position: center;
 }
 
+.business-hours{
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hour-info{
+  background-color: var(--red);
+  margin-top: 1rem;
+  gap: 1rem;
+  padding: .5rem;
+  border-radius: 7px;
+}
+
+.timer{
+  /* background-color: rgba(29, 6, 5, 0.2); */
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+
+.timer-info{
+  border-left: 1px solid rgba(29, 6, 5, 0.4);
+  padding-inline: 1rem;
+}
+
+.timer-info h3{
+  color: #1D0605;
+}
+
+.timer-info p{ 
+  color: var(--light-brown);
+}
+
+.instagramHashCta h1{
+  color: var(--red);
+}
+
+.instagramHashCta p{
+  color: rgba(29, 6, 5, 0.69);;
+}
+
+/* media queries */
 @media (max-width: 960px) {
   header {
     margin-bottom: 6rem;
@@ -342,5 +387,9 @@ main {
 
   .offer-info h2{
     font-size: 1.5rem;
+  }
+
+  .hour-info{
+    width: 100%;
   }
 }
