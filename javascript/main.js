@@ -16,7 +16,8 @@ const fetchMenuItems = async () => {
 }
 
 const handleGenerateItems = menuItems =>  menuItems
-.map(({ plate, ingredients, price }) => {
+.map(({ plate, ingredients, price }) =>
+
       `
     <li>
       <h1 class="title"> 
@@ -27,12 +28,13 @@ const handleGenerateItems = menuItems =>  menuItems
       </p>
   </li>
       `
-    }).join("")
+    ).join("")
 
 
 const addMenuIntoList = async () => { 
     const items = await fetchMenuItems()
     const template = handleGenerateItems(items)
+    console.log(template)
     menuList.innerHTML += template
 }
 
