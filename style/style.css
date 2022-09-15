@@ -15,6 +15,7 @@
   --title: "Lilita One", sans-serif;
   --text: "Lato", sans-serif;
   --red: #f43127;
+  --darker-red: #fc2318;
   --yellow: #f59a1b;
   --green: #00a950;
   --lightgreen: #a1cf67;
@@ -155,7 +156,13 @@ nav {
   font-weight: bold;
   margin-top: 1rem;
   border-radius: 3px;
+  transition: .5s ease;
+  cursor: pointer;
 }
+
+.cta-btn:hover{
+  background-color: var(--darker-re2);
+} 
 /* banner hero */
 
 .hero-banner {
@@ -353,7 +360,7 @@ main {
 }
 
 
-.right-cta{ 
+.left-cta{ 
   background-image: url(../assets/banner-menu.png);
   background-position:left;
   background-repeat: no-repeat;
@@ -364,18 +371,20 @@ main {
 }
 
 
-.right-cta-menu-info{ 
+.left-cta-menu-info{ 
   max-width: 30rem;
   min-height: 10rem;
   align-self: center;
+  padding: .5rem;
 }
 
-.right-cta-menu-info h1{
+.left-cta-menu-info h1{
   font-size: 3rem;
   color: var(--brown);
+  margin-bottom: 1rem;
 }
 
-.right-cta-menu-info span{
+.left-cta-menu-info span{
   color: var(--brown);
 }
 
@@ -388,7 +397,25 @@ main {
 
 .menu-list h2{ 
   color: var(--yellow);
-  text-align: center;
+  text-align: left;
+}
+
+#menuList{
+  margin-top: 1rem;
+}
+
+#menuList h2, #menuList p{ 
+  color: var(--light-brown);
+  text-align: left;
+}
+
+#menuList p  {
+  margin-top: .5rem;
+  padding-right: 1rem;
+}
+
+#menuList li{ 
+   margin-bottom: 1rem;
 }
 /* Menu */
 
@@ -415,9 +442,24 @@ main {
     width: 85%;
     bottom: -6rem;
   }
+
+  .menu{ 
+    flex-direction: column;
+  }
+
+  .left-cta{ 
+    background-position:top right;
+  }
+
 }
 
+
 @media (max-width: 540px) {
+
+
+  html{
+    font-size: 80%;
+  }
   .info {
     bottom: -8rem;
   }
