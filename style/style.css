@@ -473,7 +473,7 @@ main {
   }
 
   .hero-banner h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .offers {
     grid-template-columns: 1fr;
