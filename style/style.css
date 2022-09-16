@@ -15,7 +15,7 @@
   --title: "Lilita One", sans-serif;
   --text: "Lato", sans-serif;
   --red: #f43127;
-  --darker-red: #fc2318;
+  --darker-red: #fd1206;
   --yellow: #f59a1b;
   --green: #00a950;
   --lightgreen: #a1cf67;
@@ -161,7 +161,7 @@ nav {
 }
 
 .cta-btn:hover{
-  background-color: var(--darker-re2);
+  background-color: var(--darker-red);
 } 
 /* banner hero */
 
@@ -365,7 +365,7 @@ main {
   background-position:left;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 30rem;
+  min-height: 40rem;
   flex: 2;
   justify-content: flex-end;
 }
@@ -473,7 +473,7 @@ main {
   }
 
   .hero-banner h1 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .offers {
     grid-template-columns: 1fr;
@@ -494,5 +494,10 @@ main {
 
   .instagramHashCta{
     margin: 0 auto;
+  }
+
+  .left-cta{
+    min-height: 30rem;
+    background-position:  right;
   }
 }

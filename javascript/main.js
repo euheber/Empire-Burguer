@@ -30,7 +30,6 @@ const handleGenerateItems = menuItems =>  menuItems
       `
     ).join("")
 
-
 const addMenuIntoList = async () => { 
     const items = await fetchMenuItems()
     const template = handleGenerateItems(items)
