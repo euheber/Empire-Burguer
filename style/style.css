@@ -597,4 +597,13 @@ min-height: 25rem;
     min-height: 30rem;
     background-position: right;
   }
+
+  .card{
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .card-info h1{ 
+    font-size: 4rem;
+  }
 }
