@@ -15,12 +15,12 @@
   --title: "Lilita One", sans-serif;
   --text: "Lato", sans-serif;
   --red: #f43127;
-  --darker-red: #fd1206;
+  --darker-red: #cf0a00;
   --yellow: #f59a1b;
   --green: #00a950;
   --lightgreen: #a1cf67;
   --black: #141318;
-  --brown: #3B200B;
+  --brown: #3b200b;
   --light-brown: #fae2cb;
 }
 
@@ -156,13 +156,13 @@ nav {
   font-weight: bold;
   margin-top: 1rem;
   border-radius: 3px;
-  transition: .5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
 }
 
-.cta-btn:hover{
+.cta-btn:hover {
   background-color: var(--darker-red);
-} 
+}
 /* banner hero */
 
 .hero-banner {
@@ -226,10 +226,10 @@ main {
   padding-inline: 2rem;
 }
 
-.specials-offers h2, .specials-offers p{
-  margin-bottom: .4rem;
+.specials-offers h2,
+.specials-offers p {
+  margin-bottom: 0.4rem;
 }
-
 
 .offers {
   display: grid;
@@ -264,13 +264,13 @@ main {
   padding: 1rem;
 }
 
-.first-offer{ 
+.first-offer {
   padding: 2rem;
 }
 
 .first-offer h2,
 .second-offer h2,
-.third-offer h2{
+.third-offer h2 {
   margin: 0;
 }
 
@@ -300,42 +300,41 @@ main {
   background-position: center;
 }
 
-.business-hours{
+.business-hours {
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
-.hour-info{
+.hour-info {
   background-color: var(--red);
   margin-top: 1rem;
   gap: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 7px;
-  width: 50%;
+  /* width: 80%; */
 }
 
-.timer{
-
+.timer {
   align-items: center;
   justify-content: center;
 }
 
-.timer svg{
+.timer svg {
   border-radius: 50%;
   padding: 1rem;
-  background-color: rgba(29, 6, 5, 0.2); 
+  background-color: rgba(29, 6, 5, 0.2);
 }
-.timer-info{
+.timer-info {
   border-left: 1px solid rgba(29, 6, 5, 0.4);
   padding-inline: 1rem;
 }
 
-.timer-info h3{
-  color: #1D0605;
+.timer-info h3 {
+  color: #1d0605;
 }
 
-.timer-info p{ 
+.timer-info p {
   color: var(--light-brown);
 }
 
@@ -343,26 +342,25 @@ main {
   text-align: center;
 }
 
-.instagramHashCta h1{
+.instagramHashCta h1 {
   color: var(--red);
 }
 
-.instagramHashCta p{
-  color: rgba(29, 6, 5, 0.69);;
+.instagramHashCta p {
+  color: rgba(29, 6, 5, 0.69);
 }
 
 /* Menu */
 
-.menu{
+.menu {
   margin-top: 3rem;
   width: 100%;
   min-height: 20rem;
 }
 
-
-.left-cta{ 
+.left-cta {
   background-image: url(../assets/banner-menu.png);
-  background-position:left;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 40rem;
@@ -370,54 +368,157 @@ main {
   justify-content: flex-end;
 }
 
-
-.left-cta-menu-info{ 
+.left-cta-menu-info {
   max-width: 30rem;
   min-height: 10rem;
   align-self: center;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.left-cta-menu-info h1{
+.left-cta-menu-info h1 {
   font-size: 3rem;
   color: var(--brown);
   margin-bottom: 1rem;
 }
 
-.left-cta-menu-info span{
+.left-cta-menu-info span {
   color: var(--brown);
 }
 
-.menu-list{
+.menu-list {
   padding-inline: 1rem;
   padding-block: 2rem;
   flex: 1;
   background-color: var(--brown);
 }
 
-.menu-list h2{ 
+.menu-list h2 {
   color: var(--yellow);
   text-align: left;
 }
 
-#menuList{
+#menuList {
   margin-top: 1rem;
 }
 
-#menuList h2, #menuList p{ 
+#menuList h2,
+#menuList p {
   color: var(--light-brown);
   text-align: left;
 }
 
-#menuList p  {
-  margin-top: .5rem;
+#menuList p {
+  margin-top: 0.5rem;
   padding-right: 1rem;
 }
 
-#menuList li{ 
-   margin-bottom: 1rem;
+#menuList li {
+  margin-bottom: 1rem;
 }
 /* Menu */
+
+
+/* card image */
+
+.card {
+  margin: 2rem auto 0 auto;
+  /* max-width: 900px; */
+  width: 90%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(29, 6, 5, 0.15);
+  padding: 1rem;
+}
+
+.card-image{ 
+width: 25rem;
+min-height: 25rem;
+}
+
+.card-image img{
+  max-width: 100%;
+}
+
+.card-info{
+  width: 20rem;
+}
+
+.card-info h1{
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  color: var(--brown);
+}
+
+.card-info h1 span{ 
+  padding: .05rem;
+  color: var(--brown);
+}
+/* card image */
+
+/* carrousel and comments */
+
+.comments{
+  width: 80%;
+  margin: 1rem auto 0 auto;
+}
+
+.comments h2{
+  color: var(--brown);
+}
+
+.carroussel{
+  margin-top: 1rem;
+  overflow-x: scroll;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.line-clamp{ 
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.carrousel-content{ 
+  flex-shrink: 0;
+  width: 23.125rem;
+  padding: 1rem;
+  box-shadow: 0px 4px 25px rgba(60, 35, 13, 0.1);
+  border-radius: 10px;
+  height: 11.063rem;
+}
+
+.corrousel-profile-content{
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+
+.profile-image{
+  align-items: center;
+  justify-content: center;
+
+}
+
+.profile-image img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.carrousel-name-age h3{ 
+  color: var(--brown);
+}
+
+.carrousel-name-age span{
+  font-size: .75rem;
+}
+
+/* carrousel and comments */
+
 
 /* media queries */
 @media (max-width: 960px) {
@@ -443,21 +544,17 @@ main {
     bottom: -6rem;
   }
 
-  .menu{ 
+  .menu {
     flex-direction: column;
   }
 
-  .left-cta{ 
-    background-position:top right;
+  .left-cta {
+    background-position: top right;
   }
-
 }
 
-
 @media (max-width: 540px) {
-
-
-  html{
+  html {
     font-size: 80%;
   }
   .info {
@@ -484,20 +581,20 @@ main {
       "third-offer";
   }
 
-  .offer-info h2{
+  .offer-info h2 {
     font-size: 1.5rem;
   }
 
-  .hour-info{
+  .hour-info {
     width: 100%;
   }
 
-  .instagramHashCta{
+  .instagramHashCta {
     margin: 0 auto;
   }
 
-  .left-cta{
+  .left-cta {
     min-height: 30rem;
-    background-position:  right;
+    background-position: right;
   }
 }
