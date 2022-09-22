@@ -226,6 +226,11 @@ main {
   padding-inline: 2rem;
 }
 
+.specials-offers h2{
+  font-size: 2rem;
+  color: var(--brown);
+}
+
 .specials-offers h2,
 .specials-offers p {
   margin-bottom: 0.4rem;
@@ -282,8 +287,14 @@ main {
   display: flex;
 }
 
+
 .offer-alert {
   align-self: flex-end;
+}
+
+.imperial{
+  color: white;
+  font-size: 1.563rem;
 }
 
 .second-offer {
@@ -291,6 +302,11 @@ main {
   background-size: cover;
   grid-area: second-offer;
   background-position: center;
+}
+
+.second-offer h2, 
+.third-offer h2{ 
+  font-size: 1.25rem;
 }
 
 .third-offer {
@@ -465,6 +481,7 @@ min-height: 25rem;
 }
 
 .comments h2{
+  font-size: 2rem;
   color: var(--brown);
 }
 
@@ -518,6 +535,68 @@ min-height: 25rem;
 }
 
 /* carrousel and comments */
+
+/* instagram posts */
+.instagram-posts{ 
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.instagram-posts h2{
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--brown);
+}
+
+.posts {
+  width: 100%;
+  margin: 1rem auto 0 auto;
+  overflow: hidden;
+  position: relative;
+  animation: scroll 2s linear infinite;
+}
+
+/* @keyframes scroll { 
+  0%{
+    transform: translateX(0);
+  }
+
+  100%{ 
+    transform: translateX(-10px);
+  }
+} */
+
+.posts::before, 
+.posts::after{
+  content: '';
+  height: 100%;
+  width: 10%;
+  z-index: 2;
+  position: absolute;
+}
+
+.posts::before{ 
+  background: linear-gradient(to left, rgba(59, 32, 11, 0.05), rgba(59, 32, 11, 0.562));
+  left: 0;
+}
+
+.posts::after{
+  background: linear-gradient(to right,rgba(59, 32, 11, 0.05), rgba(59, 32, 11, 0.562));
+  right: 0;
+}
+
+.hash-burguer{
+  width: 100%; 
+  overflow: hidden;
+  padding: .5rem;
+  white-space: nowrap;
+  background-color: var(--yellow);
+}
+
+.hash-burguer h2{
+  font-size: 1.563rem;
+}
+/* instagram posts */
 
 
 /* media queries */
@@ -581,8 +660,9 @@ min-height: 25rem;
       "third-offer";
   }
 
+
   .offer-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .hour-info {
@@ -605,5 +685,9 @@ min-height: 25rem;
 
   .card-info h1{ 
     font-size: 3rem;
+  }
+
+  .img-post{
+    max-width: 8rem;
   }
 }

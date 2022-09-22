@@ -34,7 +34,7 @@ const handleGenerateItems = menuItems =>  menuItems
       </p>
   </li>
       `
-    ).join("")
+    ).join('')
 
 const handleComentList  = comments =>  
   comments.map(({name, age, image, testimonial}) => { 
@@ -57,7 +57,7 @@ const handleComentList  = comments =>
   }).join('')
 
 
-const addMenuIntoList = async () => { 
+const addItemnsIntoDOM = async () => { 
     const menuItems = await fetchMenuItems()
     const template = handleGenerateItems(menuItems)
 
@@ -68,4 +68,4 @@ const addMenuIntoList = async () => {
     carrousel.innerHTML += comentTemplate
 }
 
-addMenuIntoList()
+addItemnsIntoDOM()
