@@ -565,17 +565,6 @@ main {
   animation: scroll 2s linear infinite;
 }
 
-
-/* @keyframes scroll { 
-  0%{
-    transform: translateX(0);
-  }
-
-  100%{ 
-    transform: translateX(-10px);
-  }
-} */
-
 .posts::before,
 .posts::after {
   content: "";
