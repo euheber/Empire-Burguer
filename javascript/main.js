@@ -68,12 +68,16 @@ const getHour = () => {
 }
 
 const changeBgoNTime = (time) => {
+ 
+  if(time > 23){
+    hourInfo.style.backgroundColor = "var(--lightblack)"
+  }
+
   if (time >= 17 && time <= 23) {
     hourInfo.style.backgroundColor = "var(--red);"
   } 
-  hourInfo.style.backgroundColor = "var(--lightblack)"
- 
 }
+
 
 const addItemnsIntoDOM = async () => {
   const menuItems = await fetchMenuItems()
