@@ -11,6 +11,10 @@
   font-weight: 400;
 }
 
+body, html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --title: "Lilita One", sans-serif;
   --text: "Lato", sans-serif;
@@ -534,7 +538,7 @@ main {
 }
 
 .posts {
-  width: 100%;
+  max-width: 1600;
   margin: 1rem auto 0 auto;
   overflow: hidden;
   position: relative;
