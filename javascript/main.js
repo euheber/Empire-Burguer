@@ -62,7 +62,7 @@ const handleComentList = (comments) =>
     })
     .join("")
 
-const getHours = () => {
+const getHour = () => {
   const horas = new Date().getHours()
   changeBgoNTime(horas)
 }
@@ -70,9 +70,9 @@ const getHours = () => {
 const changeBgoNTime = (time) => {
   if (time >= 17 && time <= 23) {
     hourInfo.style.backgroundColor = "var(--red);"
-  } else {
-    hourInfo.style.backgroundColor = "var(--lightblack)"
-  }
+  } 
+  hourInfo.style.backgroundColor = "var(--lightblack)"
+ 
 }
 
 const addItemnsIntoDOM = async () => {
@@ -85,7 +85,7 @@ const addItemnsIntoDOM = async () => {
   menuList.innerHTML += template
   carrousel.innerHTML += comentTemplate
 
-  getHours()
+  getHour()
 }
 
 addItemnsIntoDOM()
