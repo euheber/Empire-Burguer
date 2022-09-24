@@ -24,6 +24,7 @@ body, html{
   --green: #00a950;
   --lightgreen: #a1cf67;
   --black: #141318;
+  --lightblack: #4a4658;
   --brown: #3b200b;
   --light-brown: #fae2cb;
   --blue: rgba(2, 14, 31, 0.69);
@@ -138,6 +139,14 @@ nav {
 .mobile-menu-list {
   flex-direction: column;
   gap: 2rem;
+}
+
+.mobile-menu-list li a{
+  transition: .5s ease;
+}
+
+.mobile-menu-list li a:hover{
+  color: var(--yellow);
 }
 
 .cta-btn {
@@ -482,6 +491,17 @@ main {
   padding: 1rem;
 }
 
+
+.carroussel::-webkit-scrollbar{
+  height: 5px;
+  background: transparent;
+}
+
+.carroussel::-webkit-scrollbar-thumb{
+  background-color: var(--yellow);
+  border-radius: 5px;
+}
+
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -544,6 +564,7 @@ main {
   position: relative;
   animation: scroll 2s linear infinite;
 }
+
 
 /* @keyframes scroll { 
   0%{
@@ -627,6 +648,9 @@ main {
 .delivery-text-content {
   border-left: 1px solid var(--black);
   padding-left: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
 .delivery-text-content h3 {

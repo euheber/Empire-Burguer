@@ -1,9 +1,8 @@
 const mobileBtn = document.querySelector("#mobile-btn")
 const mobileMenu = document.querySelector(".mobile-menu")
 const menuList = document.querySelector("#menuList")
-const carrousel = document.querySelector('#carrousel')
-
-
+const carrousel = document.querySelector("#carrousel")
+const hourInfo = document.querySelector("#hourInfo")
 
 mobileBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("active")
@@ -11,20 +10,24 @@ mobileBtn.addEventListener("click", () => {
 })
 
 const fetchMenuItems = async () => {
-  const response = await fetch("https://api.brchallenges.com/api/empire-burger/menu")
-  return response.json()
-
-}
-
-const fetchCommentSection = async () => { 
-  const response = await fetch('https://api.brchallenges.com/api/empire-burger/testimonials')
+  const response = await fetch(
+    "https://api.brchallenges.com/api/empire-burger/menu"
+  )
   return response.json()
 }
 
-const handleGenerateItems = menuItems =>  menuItems
-.map(({ plate, ingredients, price }) =>
+const fetchCommentSection = async () => {
+  const response = await fetch(
+    "https://api.brchallenges.com/api/empire-burger/testimonials"
+  )
+  return response.json()
+}
 
-      `
+const handleGenerateItems = (menuItems) =>
+  menuItems
+    .map(
+      ({ plate, ingredients, price }) =>
+        `
     <li>
       <h2 class="title"> 
           ${plate}.......................R$${price}
@@ -34,11 +37,13 @@ const handleGenerateItems = menuItems =>  menuItems
       </p>
   </li>
       `
-    ).join('')
+    )
+    .join("")
 
-const handleComentList  = comments =>  
-  comments.map(({name, age, image, testimonial}) => { 
-    return ` 
+const handleComentList = (comments) =>
+  comments
+    .map(({ name, age, image, testimonial }) => {
+      return ` 
      <div class="carrousel-content">
     <p class="line-clamp">
       ${testimonial}
@@ -54,18 +59,33 @@ const handleComentList  = comments =>
     </div>
 </div>
     `
-  }).join('')
+    })
+    .join("")
 
+const getHours = () => {
+  const horas = new Date().getHours()
+  changeBgoNTime(horas)
+}
 
-const addItemnsIntoDOM = async () => { 
-    const menuItems = await fetchMenuItems()
-    const template = handleGenerateItems(menuItems)
+const changeBgoNTime = (time) => {
+  if (time >= 17 && time <= 23) {
+    hourInfo.style.backgroundColor = "var(--red);"
+  } else {
+    hourInfo.style.backgroundColor = "var(--lightblack)"
+  }
+}
 
-    const comentList = await fetchCommentSection()
-    const comentTemplate  = handleComentList(comentList)
-    
-    menuList.innerHTML += template
-    carrousel.innerHTML += comentTemplate
+const addItemnsIntoDOM = async () => {
+  const menuItems = await fetchMenuItems()
+  const template = handleGenerateItems(menuItems)
+
+  const comentList = await fetchCommentSection()
+  const comentTemplate = handleComentList(comentList)
+
+  menuList.innerHTML += template
+  carrousel.innerHTML += comentTemplate
+
+  getHours()
 }
 
 addItemnsIntoDOM()
