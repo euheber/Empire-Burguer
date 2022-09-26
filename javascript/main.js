@@ -2,7 +2,16 @@ const mobileBtn = document.querySelector("#mobile-btn")
 const mobileMenu = document.querySelector(".mobile-menu")
 const menuList = document.querySelector("#menuList")
 const carrousel = document.querySelector("#carrousel")
-const hourInfo = document.querySelector("#hourInfo")
+const hourInfo = document.querySelector(".hour-info ")
+
+let data = new Date()
+let horas = data.getHours()
+
+if(horas >= 17 && horas < 23){
+  hourInfo.style.backgroundColor = 'var(--red)'
+} else { 
+  hourInfo.style.backgroundColor = 'var(--lightblack)'
+}
 
 mobileBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("active")
@@ -62,23 +71,6 @@ const handleComentList = (comments) =>
     })
     .join("")
 
-const getHour = () => {
-  const horas = new Date().getHours()
-  changeBgoNTime(horas)
-}
-
-const changeBgoNTime = (time) => {
- 
-  if(time > 23){
-    hourInfo.style.backgroundColor = "var(--lightblack)"
-  }
-
-  if (time >= 17 && time <= 23) {
-    hourInfo.style.backgroundColor = "var(--red);"
-  } 
-}
-
-
 const addItemnsIntoDOM = async () => {
   const menuItems = await fetchMenuItems()
   const template = handleGenerateItems(menuItems)
@@ -88,8 +80,6 @@ const addItemnsIntoDOM = async () => {
 
   menuList.innerHTML += template
   carrousel.innerHTML += comentTemplate
-
-  getHour()
 }
 
 addItemnsIntoDOM()
