@@ -6,11 +6,29 @@ const hourInfo = document.querySelector(".hour-info ")
 
 let data = new Date()
 let horas = data.getHours()
+let day = data.getDay()
 
-if(horas >= 17 && horas < 23){
-  hourInfo.style.backgroundColor = 'var(--red)'
-} else { 
-  hourInfo.style.backgroundColor = 'var(--lightblack)'
+switch (day) {
+  case 0:
+    if (horas >= 18 && horas < 23) {
+      hourInfo.style.backgroundColor = "var(--red)"
+    } else {
+      hourInfo.style.backgroundColor = "var(--lightblack)"
+    }
+    break
+  case 6:
+    if (horas >= 18 && horas < 23) {
+      hourInfo.style.backgroundColor = "var(--red)"
+    } else {
+      hourInfo.style.backgroundColor = "var(--lightblack)"
+    }
+    break
+  default:
+    if (horas >= 17 && horas < 23) {
+      hourInfo.style.backgroundColor = "var(--red)"
+    } else {
+      hourInfo.style.backgroundColor = "var(--lightblack)"
+    }
 }
 
 mobileBtn.addEventListener("click", () => {
